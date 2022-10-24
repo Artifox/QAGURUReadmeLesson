@@ -95,13 +95,13 @@ gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -D
 ```bash
 allure serve build/allure-results
 ```
-## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/allure/">Allure report</a>
+## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/thread13_lesson14_akoptsiukh/allure/">Allure report</a>
 
 ## ⛅: Основной отчет
 <p align="center">
 <img title="Allure Overview Dashboard" src="images/screens/report.PNG">
 </p>
-C:\Users\maver\IBS-tests\images\screens\report.PNG
+
 
 ## 🧪: Тесты
 <p align="center">
@@ -116,7 +116,7 @@ C:\Users\maver\IBS-tests\images\screens\report.PNG
 ## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="images/screens/notif.PNG" >
+<img title="Allure Overview Dashboard" src="" >
 </p>
 
 ## <img src="images/logo/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео <a target="_blank" href="https://selenoid.autotests.cloud/video/fe43b9f89a795109ff4959044e6650d7.mp4"> прохождения тестов </a>
