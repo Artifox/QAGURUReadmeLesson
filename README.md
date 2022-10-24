@@ -116,10 +116,10 @@ allure serve build/allure-results
 ## <img src="images/logo/Telegram.svg" width="25" height="25"  alt="Allure"/></a> Уведомление в Telegram при помощи бота
 
 <p align="center">
-<img title="Allure Overview Dashboard" src="" >
+<img title="Allure Overview Dashboard" src="images/screens/notif.png" >
 </p>
 
 ## <img src="images/logo/Selenoid.svg" width="25" height="25" alt="Jenkins"/></a> Видео <a target="_blank" href="https://selenoid.autotests.cloud/video/fe43b9f89a795109ff4959044e6650d7.mp4"> прохождения тестов </a>
 <p align="center">
-<a href="https://selenoid.autotests.cloud/video/fe43b9f89a795109ff4959044e6650d7.mp4"></a>
+<a href="https://selenoid.autotests.cloud/video/8e9067e7c60650105b93eeeee9173893.mp4"></a>
 </p>
