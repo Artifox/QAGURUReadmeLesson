@@ -25,7 +25,7 @@ public class QaseTests extends TestBase {
         step("Page title should have text 'Test case management software'", () -> {
             String expectedTitle = "Test case management software";
             String actualTitle = title();
-            assertThat(actualTitle).isEqualTo(expectedTitle);
+            assertThat(actualTitle).contains(expectedTitle);
         });
     }
 
