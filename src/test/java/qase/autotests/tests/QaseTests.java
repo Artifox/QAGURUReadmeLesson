@@ -60,4 +60,37 @@ public class QaseTests extends TestBase {
             $(".flexible-plans").shouldHave(Condition.text("Flexible plans for any team"));
         });
     }
+
+    @Test
+    @DisplayName("Unauthorized user should have the ability to open blog page")
+    @Description("Unauthorized user can navigate to blog page from main page")
+    void verifyAbilityToOpenBlogPageForUnauthorizedUserTest() {
+        step("Open url 'https://qase.io/'", () ->
+                open("https://qase.io/"));
+
+        step("Click on Login button", () -> {
+            $(byText("Blog")).click();
+        });
+
+        step("Check that blog page is opened", () -> {
+            $(".site-logo").shouldBe(Condition.visible);
+        });
+    }
+
+    @Test
+    @DisplayName("Unauthorized user should have the ability to open documentation page")
+    @Description("Unauthorized user can navigate to documentation page from main page")
+    void verifyAbilityToOpenDocumentationPageForUnauthorizedUserTest() {
+        step("Open url 'https://qase.io/'", () ->
+                open("https://qase.io/"));
+
+        step("Click on Login button", () -> {
+            $(byText("Developers")).click();
+        });
+
+        step("Check that blog page is opened", () -> {
+            $(byText("Documentation")).shouldBe(Condition.visible);
+        });
+    }
+
 }

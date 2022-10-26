@@ -37,12 +37,20 @@ TC2 - Unauthorized user can navigate to login page from main page
 - ✓ Click on 'Login' button
 - ✓ Check that login page is opened
 
+TC3 - Unauthorized user can navigate to price page from main page
+- ✓ Open url 'https://qase.io/'"
+- ✓ Click on 'Price' button
+- ✓ Check that price page is opened
 
-## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/"> job </a>
-<p align="center">
-<a href="https://jenkins.autotests.cloud/job/IBS_test/"><img src="images/screens/jenkins.PNG" alt="Jenkins"/></a>
-</p>
+TC4 - Unauthorized user can navigate to blog page from main page
+- ✓ Open url 'https://qase.io/'"
+- ✓ Click on 'Blog' button
+- ✓ Check that Blog page is opened
 
+TC5 - Unauthorized user can navigate to documentation page from main page
+- ✓ Open url 'https://qase.io/'"
+- ✓ Click on 'Developers' button
+- ✓ Check that documentation page is opened
 
 ## 🧙: Параметры сборки в Jenkins:
 
@@ -52,7 +60,7 @@ TC2 - Unauthorized user can navigate to login page from main page
 
 
 
-## 🏗️: Запуск тестов из терминала
+## 🏗️: Запуск тестов
 Локальный запуск:
 ```
 gradle clean test
@@ -63,38 +71,18 @@ gradle clean test
 clean
 test
 -Dbrowser=${BROWSER}
--Dversion=${VERSION}
--Dsize=${BROWSER_SIZE}
--Durl=${REMOTE_URL}
+-DbrowserVersion=${BROWSER_VERSION}
+-DbrowserSize=${BROWSER_SIZE}
+-DremoteDriverUrl=https://user1:1234@${REMOTE_DRIVER_URL}/wd/hub/
+-DvideoStorage=https://${REMOTE_DRIVER_URL}/video/
+-Dthreads=${THREADS}
 ```
 
-# Примеры использования
+## <img src="images/logo/Jenkins.svg" width="25" height="25"  alt="Jenkins"/></a> Jenkins <a target="_blank" href="https://jenkins.autotests.cloud/job/IBS_test/"> job </a>
+<p align="center">
+<a href="https://jenkins.autotests.cloud/job/thread13_lesson14_akoptsiukh/"><img src="images/screens/jenkins.png" alt="Jenkins"/></a>
+</p>
 
-### Для запуска удаленных тестов необходимо заполнить remote.properties или передать значение:
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
-
-
-Запускайте тесты с заполненным remote.properties:
-```bash
-gradle clean test
-```
-
-Запускайте тесты с незаполненным remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
-```
-
-Выдать отчет:
-```bash
-allure serve build/allure-results
-```
 ## <img src="images/logo/Allure.svg" width="25" height="25"  alt="Allure"/></a> Отчет в <a target="_blank" href="https://jenkins.autotests.cloud/job/thread13_lesson14_akoptsiukh/allure/">Allure report</a>
 
 ## ⛅: Основной отчет
