@@ -1,4 +1,4 @@
-package qase.autotests.config;
+package cloud.autotests.config;
 
 import org.aeonbits.owner.Config;
 

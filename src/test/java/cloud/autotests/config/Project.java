@@ -1,7 +1,6 @@
 package cloud.autotests.config;
 
 import org.aeonbits.owner.ConfigFactory;
-import qase.autotests.config.ProjectConfig;
 
 public class Project {
     public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());

@@ -1,27 +1,30 @@
-package qase.autotests.tests;
+package cloud.autotests.tests;
 
+import cloud.autotests.config.Project;
+import cloud.autotests.config.ProjectConfig;
+import cloud.autotests.helpers.AllureAttachments;
+import cloud.autotests.helpers.DriverSettings;
+import cloud.autotests.helpers.DriverUtils;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.junit5.AllureJunit5;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import qase.autotests.config.ProjectConfig;
-import qase.autotests.helpers.AllureAttachments;
-import qase.autotests.helpers.DriverSettings;
-import qase.autotests.helpers.DriverUtils;
+import org.junit.jupiter.api.extension.ExtendWith;
 
 
-public class TestBase extends AllureAttachments {
-    public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
+@ExtendWith({AllureJunit5.class})
+public class TestBase {
+    public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties()); // !!
 
     @BeforeAll
     static void beforeAll() {
         DriverSettings.configure();
-        Configuration.baseUrl = config.browser();
-
+        Configuration.baseUrl = config.baseUrl();
     }
 
     @BeforeEach
@@ -38,7 +41,7 @@ public class TestBase extends AllureAttachments {
         AllureAttachments.addBrowserConsoleLogs();
         Selenide.closeWebDriver();
 
-        if (cloud.autotests.config.Project.isVideoOn()) {
+        if (Project.isVideoOn()) {
             AllureAttachments.addVideo(sessionId);
         }
     }

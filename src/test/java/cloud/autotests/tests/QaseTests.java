@@ -1,4 +1,4 @@
-package qase.autotests.tests;
+package cloud.autotests.tests;
 
 import com.codeborne.selenide.Condition;
 import io.qameta.allure.Description;
@@ -14,7 +14,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 
 public class QaseTests extends TestBase {
-
     @Test
     @Description("Test verify that page title is displayed on main page")
     @DisplayName("Page title should have header text")
@@ -92,5 +91,4 @@ public class QaseTests extends TestBase {
             $(byText("Documentation")).shouldBe(Condition.visible);
         });
     }
-
 }
