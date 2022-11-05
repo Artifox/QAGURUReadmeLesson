@@ -19,7 +19,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
-    public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties()); // !!
+    public static ProjectConfig config = ConfigFactory.create(ProjectConfig.class, System.getProperties());
 
     @BeforeAll
     static void beforeAll() {
